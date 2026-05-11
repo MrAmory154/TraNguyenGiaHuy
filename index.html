@@ -3,93 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AMORY ĐẠI ĐẾ | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;500;700&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>Portfolio | Trà Nguyễn Gia Huy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <style>
+        :root {
+            --navy: #001f3f;
+            --burgundy: #800020;
+            --gold: #d4af37;
+            --white: #ffffff;
+            --glass: rgba(255, 255, 255, 0.05);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: #020617;
+            color: var(--white);
+            font-family: 'Lato', sans-serif;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 80px 10%;
+            position: relative;
+            background: radial-gradient(circle at center, #002d5c 0%, var(--navy) 100%);
+        }
+
+        /* Hero Section */
+        .hero { text-align: center; }
+        .hero h1 { 
+            font-family: 'Playfair Display', serif; 
+            font-size: 5.5rem; 
+            margin-bottom: 20px;
+            color: var(--gold);
+        }
+        .hero p { font-size: 1.5rem; letter-spacing: 3px; text-transform: uppercase; opacity: 0.8; }
+        .divider { width: 80px; height: 4px; background: var(--burgundy); margin: 30px auto; }
+
+        /* Typography */
+        h2.section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--gold);
+            margin-bottom: 50px;
+            border-left: 6px solid var(--burgundy);
+            padding-left: 20px;
+        }
+
+        /* AI Tools Grid */
+        .ai-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .ai-card {
+            background: var(--glass);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            backdrop-filter: blur(10px);
+            transition: 0.4s;
+        }
+        .ai-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--gold);
+            background: rgba(128, 0, 32, 0.1);
+        }
+        .ai-card h3 { color: var(--gold); margin-bottom: 15px; font-size: 1.5rem; }
+        .ai-card i { font-size: 2.5rem; color: var(--gold); margin-bottom: 20px; display: block; }
+
+        /* Project placeholder */
+        .project-img {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(45deg, var(--navy), var(--burgundy));
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--gold);
+        }
+
+        .contact-info { text-align: center; font-size: 1.2rem; }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 3rem; }
+        }
+    </style>
 </head>
 <body>
 
-    <nav class="navbar" data-aos="fade-down">
-        <div class="logo">AMORY</div>
-        <ul>
-            <li><a href="#about">Khởi đầu</a></li>
-            <li><a href="#projects">Công trình</a></li>
-            <li><a href="#contact">Diện kiến</a></li>
-        </ul>
-    </nav>
-
-    <header class="hero">
-        <div class="hero-content" data-aos="zoom-in">
-            <h1 class="emperor-title">AMORY ĐẠI ĐẾ</h1>
-            <p class="subtitle">Trà Nguyễn Gia Huy | MSSV: 24150022</p>
-            <div class="glass-card" data-aos="fade-up" data-aos-delay="400">
-                <p>Kẻ trị vì những mảng màu Xanh mực & Đỏ đô</p>
-            </div>
-            <a href="#projects" class="btn-main">Khám phá vương quốc</a>
+    <section class="section hero">
+        <div data-aos="zoom-out" data-aos-duration="1500">
+            <p>Concept: Vương Quyền Sáng Tạo</p>
+            <h1>Trà Nguyễn Gia Huy</h1>
+            <div class="divider"></div>
+            <p>MSSV: 24150022 | Lớp: 020100119504</p>
+            <p style="margin-top: 10px; font-size: 1.1rem; opacity: 0.6;">Đồ họa và Kỹ thuật số</p>
         </div>
-    </header>
+    </section>
 
-    <section id="about" class="container">
-        <div class="about-flex">
-            <div class="about-text" data-aos="fade-right">
-                <h2 class="section-title"><i class="fa-solid fa-scroll"></i> Về Cao Nhân</h2>
-                <p>Tôi là sinh viên năm 2 ngành Đồ họa tại Nông Lâm. Với danh xưng AMORY, tôi coi mỗi thiết kế là một "đạo luật" về cái đẹp, nơi màu sắc và hình khối phải phục tùng ý chí sáng tạo.</p>
+    <section class="section">
+        <h2 class="section-title" data-aos="fade-right">Ứng dụng AI trong thiết kế</h2>
+        <div class="ai-grid">
+            <div class="ai-card" data-aos="flip-up" data-aos-delay="100">
+                <i class="fa-solid fa-brain"></i>
+                <h3>Gemini (Google)</h3>
+                <p><strong>Công đoạn:</strong> Sáng tạo nội dung & Hiệu chỉnh văn bản.</p>
+                <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.7;">Hỗ trợ viết đoạn giới thiệu bản thân theo phong cách cao nhân, tinh chỉnh lồng ghép kỹ năng Figma & Photoshop.</p>
             </div>
-            <div class="skills-box" data-aos="fade-left">
-                <h3>Pháp bảo Kỹ năng</h3>
-                <div class="skills-grid">
-                    <span class="skill-tag">Figma & UI/UX</span>
-                    <span class="skill-tag">Photoshop</span>
-                    <span class="skill-tag">Illustrator</span>
-                    <span class="skill-tag">Branding Strategy</span>
-                    <span class="skill-tag">C++ Basic</span>
-                    <span class="skill-tag">AI Tools (Gemini)</span>
+            <div class="ai-card" data-aos="flip-up" data-aos-delay="300">
+                <i class="fa-solid fa-code"></i>
+                <h3>ChatGPT</h3>
+                <p><strong>Công đoạn:</strong> Tối ưu mã nguồn CSS & Hiệu ứng tương tác.</p>
+                <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.7;">Xử lý mã Hex màu Burgundy (#800020) và Navy (#001f3f) để đảm bảo bộ nhận diện thương hiệu.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title" data-aos="fade-right">Dự án tiêu biểu</h2>
+        <div class="ai-grid">
+            <div class="ai-card" data-aos="fade-up">
+                <div class="project-img"><i class="fa-solid fa-cake-candles" style="font-size: 3rem; opacity: 0.3;"></i></div>
+                <h3 style="margin-top: 20px;">Amory Cake</h3>
+                <p>Thiết kế UI/UX cho tiệm bánh ngọt cao cấp. Tối ưu trải nghiệm người dùng trên Figma và Photoshop.</p>
+            </div>
+            <div class="ai-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-img"><i class="fa-solid fa-shirt" style="font-size: 3rem; opacity: 0.3;"></i></div>
+                <h3 style="margin-top: 20px;">Velaro Uniform</h3>
+                <p>Phát triển bộ nhận diện thương hiệu và thiết kế mẫu áo Polo chuyên nghiệp cho doanh nghiệp.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section hero">
+        <div data-aos="fade-up">
+            <h2 class="section-title" style="border: none; padding: 0; text-align: center;">Kết nối cùng Huy</h2>
+            <div class="contact-info">
+                <p><i class="fa-solid fa-envelope" style="color: var(--gold);"></i> tra.huy24150022@st.hcmuaf.edu.vn</p>
+                <div style="margin-top: 30px; font-size: 2rem;">
+                    <i class="fa-brands fa-github" style="margin: 0 15px; cursor: pointer;"></i>
+                    <i class="fa-brands fa-behance" style="margin: 0 15px; cursor: pointer;"></i>
+                    <i class="fa-brands fa-linkedin" style="margin: 0 15px; cursor: pointer;"></i>
                 </div>
             </div>
+            <p style="margin-top: 100px; opacity: 0.3; font-size: 0.8rem;">© 2026 Designed by Trà Nguyễn Gia Huy</p>
         </div>
     </section>
-
-    <section id="projects" class="container">
-        <h2 class="section-title" data-aos="fade-up" style="text-align:center;">Công trình vĩ đại</h2>
-        <div class="project-grid">
-            <div class="project-card" data-aos="flip-left" data-aos-delay="100">
-                <div class="card-icon"><i class="fa-solid fa-cake-candles"></i></div>
-                <h3>Amory Cake</h3>
-                <p>Dự án thiết kế Website cho tiệm bánh, kết hợp giữa sự ngọt ngào và bố cục Photoshop đẳng cấp.</p>
-            </div>
-            <div class="project-card" data-aos="flip-left" data-aos-delay="300">
-                <div class="card-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
-                <h3>Student Study App</h3>
-                <p>Hệ thống quản lý học tập tối ưu được thiết kế Prototyping chuyên nghiệp trên Figma.</p>
-            </div>
-            <div class="project-card" data-aos="flip-left" data-aos-delay="500">
-                <div class="card-icon"><i class="fa-solid fa-shirt"></i></div>
-                <h3>Fashion Wholesale</h3>
-                <p>Kế hoạch kinh doanh và chiến dịch Marketing sáng tạo cho thương hiệu thời trang.</p>
-            </div>
-        </div>
-    </section>
-
-    <footer id="contact" data-aos="fade-up">
-        <p>Lớp: 020100119504</p>
-        <p>Thánh địa: tra.huy24150022@st.hcmuaf.edu.vn</p>
-        <div class="social-icons">
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-behance"></i>
-            <i class="fa-brands fa-github"></i>
-        </div>
-        <div style="margin-top:20px; font-size: 0.8rem; opacity: 0.6;">© 2026 AMORY EMPIRE. All Rights Reserved.</div>
-    </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      AOS.init({ 
-          duration: 1000, 
-          once: false,
-          mirror: true 
-      });
+        AOS.init({
+            duration: 1000,
+            once: false,
+            mirror: true
+        });
     </script>
 </body>
 </html>
