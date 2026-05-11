@@ -1,28 +1,11 @@
 # Portfolio: Trà Nguyễn Gia Huy
-**Chuyên ngành:** Đồ họa và Kỹ thuật số
-**MSSV:** 24150022 | **Lớp:** 020100119504
 
----
+> "Dùng trí tưởng tượng tạo nên hình hài, lấy ý cảnh khắc thành nghệ thuật vĩnh hằng."
 
-## 1. Ý tưởng thiết kế tổng thể
-Website được thiết kế dựa trên concept **"Vương quyền Sáng tạo"**.
-- **Màu sắc:** Sự kết hợp giữa Xanh mực (Navy) sâu thẳm và Đỏ đô (Burgundy) đầy mạnh mẽ, điểm xuyết vàng Gold tạo sự sang trọng.
-- **Phong cách:** Bold & Elegant, tập trung vào Typography mạnh mẽ và hiệu ứng chuyển động mượt mà.
+## 1. Kỹ năng chuyên môn
+- **Thiết kế đồ họa:** Sử dụng thành thạo Photoshop, Illustrator để xử lý hình ảnh và tạo layout.
+- **Kỹ thuật số & AI:** - Ứng dụng AI để phác thảo ý tưởng và tạo mô tả thị giác (Visual Prompting).
+  - Thiết kế UI/UX trên Figma.
 
-## 2. Ứng dụng công cụ AI (Tiêu chí 2.2)
-Tôi đã khai thác sức mạnh của trí tuệ nhân tạo thông qua 02 công cụ chính:
-
-### Công cụ 1: Gemini (Google)
-- **Công đoạn:** Sáng tạo nội dung (Creative Writing) và hiệu chỉnh phong cách văn bản.
-- **Ví dụ Prompt:** *"Hãy viết đoạn giới thiệu bản thân theo phong cách một cao nhân đầy quyền lực mang tên AMORY Đại Đế cho một sinh viên thiết kế đồ họa."*
-- **Chỉnh sửa:** AI cung cấp ý tưởng về danh xưng, tôi đã tinh chỉnh lại để lồng ghép các kỹ năng thực tế như Figma và Photoshop vào một cách hài hòa.
-
-### Công cụ 2: ChatGPT
-- **Công đoạn:** Hỗ trợ tối ưu hóa mã nguồn CSS và tạo hiệu ứng tương tác.
-- **Ví dụ Prompt:** *"Viết mã CSS cho hiệu ứng hover nút bấm có màu vàng gold và bóng đổ sang trọng."*
-- **Chỉnh sửa:** Tôi đã điều chỉnh lại mã Hex (#800020, #001f3f) để đảm bảo đúng nhận diện thương hiệu cá nhân mong muốn.
-
-## 3. Quá trình phát triển
-- Phát triển trên môi trường **GitHub Codespaces**.
-- Đảm bảo tính **Responsive** cho mọi thiết bị điện thoại và máy tính.
-- Tích hợp hiệu ứng **AOS (Animate On Scroll)** để tăng trải nghiệm người dùng.
+## 2. Quy trình làm việc
+Tôi không bắt đầu bằng việc vẽ ngay, mà bắt đầu bằng việc **"Tưởng tượng"**. Tôi sử dụng Gemini để chuyển hóa những ý cảnh trừu tượng thành văn bản chi tiết, sau đó mới dùng các phần mềm Adobe để hiện thực hóa chúng thành nghệ thuật.

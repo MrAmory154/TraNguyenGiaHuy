@@ -1,62 +1,57 @@
-/* --- BIẾN MÀU SẮC CHỦ ĐẠO --- */
 :root {
-    --navy: #001f3f;        /* Xanh mực - Trí thức */
-    --burgundy: #800020;    /* Đỏ đô - Đam mê */
-    --gold: #d4af37;        /* Vàng Gold - Sang trọng */
+    --navy: #001f3f;
+    --burgundy: #800020;
+    --gold: #d4af37;
     --white: #ffffff;
-    --glass: rgba(255, 255, 255, 0.05);
 }
-
-/* --- CẤU TRÚC CHUNG --- */
-* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-    background-color: #020617;
+    background: #020617;
     color: var(--white);
     font-family: 'Lato', sans-serif;
-    line-height: 1.6;
+    margin: 0;
 }
 
-/* --- HIỆU ỨNG NỀN SLIDE --- */
 .section {
     min-height: 100vh;
+    padding: 80px 10%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 80px 10%;
     background: radial-gradient(circle at center, #002d5c 0%, var(--navy) 100%);
 }
 
-/* --- TYPOGRAPHY --- */
-h1, h2, h3 { font-family: 'Playfair Display', serif; }
+h1 { font-family: 'Playfair Display', serif; font-size: 5rem; color: var(--gold); margin: 0; }
 
-.section-title {
-    font-size: 3rem;
-    color: var(--gold);
-    margin-bottom: 50px;
-    border-left: 6px solid var(--burgundy);
-    padding-left: 20px;
+.slogan {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: var(--white);
+    margin-top: 20px;
+    opacity: 0.9;
 }
 
-/* --- THIẾT KẾ CARD & GLASSMORPHISM --- */
-.card {
-    background: var(--glass);
-    padding: 40px;
-    border-radius: 20px;
-    border: 1px solid rgba(212, 175, 55, 0.2);
-    backdrop-filter: blur(10px);
-    transition: 0.4s ease;
+.divider { width: 100px; height: 4px; background: var(--burgundy); margin: 30px auto; }
+
+/* Styles cho biểu đồ */
+.skill-chart { margin-top: 40px; width: 100%; max-width: 600px; }
+.skill-item { margin-bottom: 20px; }
+.skill-name { display: block; margin-bottom: 8px; color: var(--gold); font-weight: bold; }
+.progress-bar { background: rgba(255,255,255,0.1); height: 25px; border-radius: 12px; overflow: hidden; }
+.progress { 
+    height: 100%; 
+    background: linear-gradient(90deg, var(--burgundy), var(--gold)); 
+    text-align: right; 
+    padding-right: 10px; 
+    font-size: 0.8rem; 
+    line-height: 25px;
 }
 
-.card:hover {
-    transform: translateY(-10px);
-    border-color: var(--gold);
-    background: rgba(128, 0, 32, 0.1);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
-}
-
-/* --- RESPONSIVE --- */
-@media (max-width: 768px) {
-    .section { padding: 40px 5%; }
-    .section-title { font-size: 2.2rem; }
+.ai-box {
+    background: rgba(255,255,255,0.05);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid var(--gold);
+    margin-bottom: 40px;
 }

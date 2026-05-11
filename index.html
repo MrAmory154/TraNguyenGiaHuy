@@ -4,168 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Trà Nguyễn Gia Huy</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-    <style>
-        :root {
-            --navy: #001f3f;
-            --burgundy: #800020;
-            --gold: #d4af37;
-            --white: #ffffff;
-            --glass: rgba(255, 255, 255, 0.05);
-        }
-
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-
-        body {
-            background-color: #020617;
-            color: var(--white);
-            font-family: 'Lato', sans-serif;
-            overflow-x: hidden;
-            scroll-behavior: smooth;
-        }
-
-        .section {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 80px 10%;
-            position: relative;
-            background: radial-gradient(circle at center, #002d5c 0%, var(--navy) 100%);
-        }
-
-        /* Hero Section */
-        .hero { text-align: center; }
-        .hero h1 { 
-            font-family: 'Playfair Display', serif; 
-            font-size: 5.5rem; 
-            margin-bottom: 20px;
-            color: var(--gold);
-        }
-        .hero p { font-size: 1.5rem; letter-spacing: 3px; text-transform: uppercase; opacity: 0.8; }
-        .divider { width: 80px; height: 4px; background: var(--burgundy); margin: 30px auto; }
-
-        /* Typography */
-        h2.section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            color: var(--gold);
-            margin-bottom: 50px;
-            border-left: 6px solid var(--burgundy);
-            padding-left: 20px;
-        }
-
-        /* AI Tools Grid */
-        .ai-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        .ai-card {
-            background: var(--glass);
-            padding: 40px;
-            border-radius: 20px;
-            border: 1px solid rgba(212, 175, 55, 0.2);
-            backdrop-filter: blur(10px);
-            transition: 0.4s;
-        }
-        .ai-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--gold);
-            background: rgba(128, 0, 32, 0.1);
-        }
-        .ai-card h3 { color: var(--gold); margin-bottom: 15px; font-size: 1.5rem; }
-        .ai-card i { font-size: 2.5rem; color: var(--gold); margin-bottom: 20px; display: block; }
-
-        /* Project placeholder */
-        .project-img {
-            width: 100%;
-            height: 250px;
-            background: linear-gradient(45deg, var(--navy), var(--burgundy));
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid var(--gold);
-        }
-
-        .contact-info { text-align: center; font-size: 1.2rem; }
-        
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 3rem; }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <section class="section hero">
         <div data-aos="zoom-out" data-aos-duration="1500">
-            <p>Concept: Vương Quyền Sáng Tạo</p>
             <h1>Trà Nguyễn Gia Huy</h1>
+            <p class="slogan">"Dùng trí tưởng tượng tạo nên hình hài, lấy ý cảnh khắc thành nghệ thuật vĩnh hằng."</p>
             <div class="divider"></div>
-            <p>MSSV: 24150022 | Lớp: 020100119504</p>
-            <p style="margin-top: 10px; font-size: 1.1rem; opacity: 0.6;">Đồ họa và Kỹ thuật số</p>
+            <p class="info">MSSV: 24150022 | Lớp: 020100119504</p>
         </div>
     </section>
 
     <section class="section">
-        <h2 class="section-title" data-aos="fade-right">Ứng dụng AI trong thiết kế</h2>
-        <div class="ai-grid">
-            <div class="ai-card" data-aos="flip-up" data-aos-delay="100">
-                <i class="fa-solid fa-brain"></i>
-                <h3>Gemini (Google)</h3>
-                <p><strong>Công đoạn:</strong> Sáng tạo nội dung & Hiệu chỉnh văn bản.</p>
-                <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.7;">Hỗ trợ viết đoạn giới thiệu bản thân theo phong cách cao nhân, tinh chỉnh lồng ghép kỹ năng Figma & Photoshop.</p>
+        <h2 class="section-title" data-aos="fade-right">Kỹ năng & Quy trình Sáng tạo</h2>
+        <div class="container">
+            <div class="ai-box" data-aos="fade-up">
+                <h3><i class="fa-solid fa-wand-magic-sparkles"></i> Ứng dụng AI trong Ideation</h3>
+                <p>Tôi sử dụng AI để tạo ra các bản mô tả ý tưởng chi tiết, giúp định hình "ý cảnh" trước khi thực hiện trên các phần mềm chuyên dụng. Việc này giúp tiết kiệm 50% thời gian phác thảo thủ công.</p>
             </div>
-            <div class="ai-card" data-aos="flip-up" data-aos-delay="300">
-                <i class="fa-solid fa-code"></i>
-                <h3>ChatGPT</h3>
-                <p><strong>Công đoạn:</strong> Tối ưu mã nguồn CSS & Hiệu ứng tương tác.</p>
-                <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.7;">Xử lý mã Hex màu Burgundy (#800020) và Navy (#001f3f) để đảm bảo bộ nhận diện thương hiệu.</p>
-            </div>
-        </div>
-    </section>
 
-    <section class="section">
-        <h2 class="section-title" data-aos="fade-right">Dự án tiêu biểu</h2>
-        <div class="ai-grid">
-            <div class="ai-card" data-aos="fade-up">
-                <div class="project-img"><i class="fa-solid fa-cake-candles" style="font-size: 3rem; opacity: 0.3;"></i></div>
-                <h3 style="margin-top: 20px;">Amory Cake</h3>
-                <p>Thiết kế UI/UX cho tiệm bánh ngọt cao cấp. Tối ưu trải nghiệm người dùng trên Figma và Photoshop.</p>
-            </div>
-            <div class="ai-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="project-img"><i class="fa-solid fa-shirt" style="font-size: 3rem; opacity: 0.3;"></i></div>
-                <h3 style="margin-top: 20px;">Velaro Uniform</h3>
-                <p>Phát triển bộ nhận diện thương hiệu và thiết kế mẫu áo Polo chuyên nghiệp cho doanh nghiệp.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="section hero">
-        <div data-aos="fade-up">
-            <h2 class="section-title" style="border: none; padding: 0; text-align: center;">Kết nối cùng Huy</h2>
-            <div class="contact-info">
-                <p><i class="fa-solid fa-envelope" style="color: var(--gold);"></i> tra.huy24150022@st.hcmuaf.edu.vn</p>
-                <div style="margin-top: 30px; font-size: 2rem;">
-                    <i class="fa-brands fa-github" style="margin: 0 15px; cursor: pointer;"></i>
-                    <i class="fa-brands fa-behance" style="margin: 0 15px; cursor: pointer;"></i>
-                    <i class="fa-brands fa-linkedin" style="margin: 0 15px; cursor: pointer;"></i>
+            <div class="skill-chart" data-aos="fade-left">
+                <div class="skill-item">
+                    <span class="skill-name">Adobe Photoshop</span>
+                    <div class="progress-bar"><div class="progress" style="width: 90%;">90%</div></div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">AI Prompting (Gemini/GPT)</span>
+                    <div class="progress-bar"><div class="progress" style="width: 95%;">95%</div></div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">UI/UX Figma</span>
+                    <div class="progress-bar"><div class="progress" style="width: 85%;">85%</div></div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">Adobe Illustrator</span>
+                    <div class="progress-bar"><div class="progress" style="width: 80%;">80%</div></div>
                 </div>
             </div>
-            <p style="margin-top: 100px; opacity: 0.3; font-size: 0.8rem;">© 2026 Designed by Trà Nguyễn Gia Huy</p>
         </div>
     </section>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({
-            duration: 1000,
-            once: false,
-            mirror: true
-        });
+        AOS.init({ duration: 1000, once: false });
     </script>
 </body>
 </html>
