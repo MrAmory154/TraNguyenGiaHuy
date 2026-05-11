@@ -1,69 +1,94 @@
 :root {
-    --navy: #001f3f;      /* Xanh mực */
-    --burgundy: #800020;  /* Đỏ đô */
-    --gold: #d4af37;      /* Vàng nhẹ tạo điểm nhấn sang trọng */
-    --text-light: #e0e0e0;
+    --navy: #001f3f;      /* Xanh mực chủ đạo */
+    --burgundy: #800020;  /* Đỏ đô điểm nhấn */
+    --gold: #d4af37;      /* Vàng hoàng gia */
+    --glass: rgba(255, 255, 255, 0.05);
 }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
 
 body {
-    margin: 0;
-    font-family: 'Be Vietnam Pro', sans-serif;
     background-color: var(--navy);
-    color: var(--text-light);
-    scroll-behavior: smooth;
+    /* Hiệu ứng nền tỏa sáng từ trung tâm */
+    background: radial-gradient(circle at center, var(--burgundy) -50%, var(--navy) 80%);
+    color: #fff;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    overflow-x: hidden;
 }
 
-.container { padding: 80px 10%; text-align: center; }
+/* Navbar */
+.navbar {
+    position: fixed; top: 0; width: 100%; padding: 20px 10%;
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(0, 31, 63, 0.8); backdrop-filter: blur(15px); z-index: 1000;
+}
+.logo { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--gold); font-weight: 900; }
+.navbar ul { display: flex; list-style: none; }
+.navbar ul li a { color: #fff; text-decoration: none; margin-left: 30px; font-weight: 500; transition: 0.3s; }
+.navbar ul li a:hover { color: var(--gold); }
 
-/* HERO SECTION */
+/* Hero */
 .hero {
-    height: 100vh;
-    background: linear-gradient(135deg, var(--navy), var(--burgundy));
-    display: flex; align-items: center; justify-content: center;
-    position: relative; overflow: hidden;
+    height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center;
 }
-
 .emperor-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 5rem;
-    color: var(--gold);
-    margin: 0;
-    letter-spacing: 5px;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    font-family: 'Playfair Display', serif; font-size: clamp(3rem, 10vw, 6rem);
+    background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fcf6ba, #bf953f);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-size: 200% auto;
+    animation: shine 5s linear infinite;
+}
+@keyframes shine { to { background-position: 200% center; } }
+
+.glass-card {
+    background: var(--glass); border: 1px solid rgba(255,255,255,0.1);
+    padding: 15px 30px; border-radius: 50px; backdrop-filter: blur(10px);
+    margin: 20px auto; width: fit-content; color: var(--gold);
 }
 
-.divider {
-    width: 100px; height: 3px; background: var(--gold);
-    margin: 20px auto;
+/* Sections */
+.container { padding: 100px 10%; }
+.section-title { font-size: 2.5rem; margin-bottom: 40px; color: var(--gold); }
+.about-flex { display: flex; gap: 50px; align-items: center; flex-wrap: wrap; }
+.about-text { flex: 1; min-width: 300px; font-size: 1.1rem; line-height: 1.8; }
+.skills-grid { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 25px; }
+.skill-tag { 
+    padding: 10px 20px; border-radius: 50px; background: rgba(128, 0, 32, 0.4); 
+    border: 1px solid var(--gold); font-size: 0.85rem; transition: 0.3s;
 }
+.skill-tag:hover { background: var(--gold); color: var(--navy); transform: scale(1.1); }
 
-.btn-scroll {
-    display: inline-block; margin-top: 30px;
-    padding: 15px 40px; border: 2px solid var(--gold);
-    color: var(--gold); text-decoration: none;
-    font-weight: bold; transition: 0.4s;
-}
-
-/* Hiệu ứng tương tác (Yêu cầu 2.4) */
-.btn-scroll:hover {
-    background: var(--gold);
-    color: var(--navy);
-    transform: translateY(-5px);
-}
-
-/* PROJECTS CARDS */
-.project-grid { display: flex; gap: 20px; justify-content: center; margin-top: 40px; }
+/* Project Grid */
+.project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
 .project-card {
-    background: rgba(128, 0, 32, 0.2); /* Đỏ đô trong suốt */
-    border: 1px solid var(--burgundy);
-    padding: 30px; border-radius: 10px; flex: 1;
-    transition: 0.3s;
+    background: var(--glass); border: 1px solid rgba(255,255,255,0.1);
+    padding: 40px; border-radius: 24px; backdrop-filter: blur(5px);
+    transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-
 .project-card:hover {
-    background: var(--burgundy);
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    transform: translateY(-15px); border-color: var(--gold);
+    background: rgba(128, 0, 32, 0.2);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
+.card-icon { font-size: 2.5rem; color: var(--gold); margin-bottom: 20px; }
 
-.section-title { color: var(--gold); font-size: 2.5rem; margin-bottom: 30px; }
+/* Button */
+.btn-main {
+    display: inline-block; margin-top: 30px; padding: 16px 45px;
+    border: 2px solid var(--gold); color: var(--gold);
+    text-decoration: none; border-radius: 50px; font-weight: bold; transition: 0.4s;
+    text-transform: uppercase; letter-spacing: 2px;
+}
+.btn-main:hover { background: var(--gold); color: var(--navy); box-shadow: 0 0 30px rgba(212, 175, 55, 0.5); }
+
+footer { text-align: center; padding: 80px 10%; border-top: 1px solid var(--glass); background: rgba(0,0,0,0.2); }
+.social-icons i { font-size: 1.8rem; margin: 0 15px; cursor: pointer; transition: 0.3s; opacity: 0.7; }
+.social-icons i:hover { color: var(--gold); opacity: 1; transform: translateY(-5px); }
+
+@media (max-width: 768px) {
+    .navbar { padding: 15px 5%; }
+    .navbar ul { display: none; } /* Ẩn menu trên mobile để tối giản */
+    .container { padding: 60px 5%; }
+}

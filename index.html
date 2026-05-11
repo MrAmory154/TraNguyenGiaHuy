@@ -3,59 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AMORY Đại Đế | Portfolio</title>
+    <title>AMORY ĐẠI ĐẾ | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;500;700&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <nav class="navbar" data-aos="fade-down">
+        <div class="logo">AMORY</div>
+        <ul>
+            <li><a href="#about">Khởi đầu</a></li>
+            <li><a href="#projects">Công trình</a></li>
+            <li><a href="#contact">Diện kiến</a></li>
+        </ul>
+    </nav>
+
     <header class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
+        <div class="hero-content" data-aos="zoom-in">
             <h1 class="emperor-title">AMORY ĐẠI ĐẾ</h1>
-            <p class="subtitle">Trà Nguyễn Gia Huy - Kẻ kiến tạo thế giới thị giác</p>
-            <div class="divider"></div>
-            <p class="intro">Chào mừng bạn đến với thánh địa của sự sáng tạo, nơi cái tôi cá nhân hòa quyện cùng nghệ thuật đồ họa đương đại.</p>
-            <a href="#projects" class="btn-scroll">Khám phá vương quốc dự án</a>
+            <p class="subtitle">Trà Nguyễn Gia Huy | MSSV: 24150022</p>
+            <div class="glass-card" data-aos="fade-up" data-aos-delay="400">
+                <p>Kẻ trị vì những mảng màu Xanh mực & Đỏ đô</p>
+            </div>
+            <a href="#projects" class="btn-main">Khám phá vương quốc</a>
         </div>
     </header>
 
     <section id="about" class="container">
-        <h2 class="section-title">Về Cao Nhân</h2>
-        <p>Tôi là **Trà Nguyễn Gia Huy**, hiện đang là sinh viên năm 2 chuyên ngành Đồ họa. Dưới danh xưng **AMORY Đại Đế**, tôi coi mỗi thiết kế là một "đạo luật" về cái đẹp, nơi màu sắc và hình khối phải phục tùng ý chí sáng tạo.</p>
-    </section>
-
-    <section id="skills" class="container dark-bg">
-        <h2 class="section-title">Pháp bảo Kỹ năng</h2>
-        <div class="skills-grid">
-            <div class="skill-item"><strong>Thiết kế UI/UX:</strong> Figma, Prototyping</div>
-            <div class="skill-item"><strong>Đồ họa 2D:</strong> Adobe Illustrator, Photoshop</div>
-            <div class="skill-item"><strong>Nguyên lý thị giác:</strong> Bố cục, Màu sắc, Hình khối</div>
-            <div class="skill-item"><strong>Tư duy Branding:</strong> Xây dựng bản sắc thương hiệu</div>
-            <div class="skill-item"><strong>Lập trình cơ bản:</strong> HTML5, CSS3, C++</div>
+        <div class="about-flex">
+            <div class="about-text" data-aos="fade-right">
+                <h2 class="section-title"><i class="fa-solid fa-scroll"></i> Về Cao Nhân</h2>
+                <p>Tôi là sinh viên năm 2 ngành Đồ họa tại Nông Lâm. Với danh xưng AMORY, tôi coi mỗi thiết kế là một "đạo luật" về cái đẹp, nơi màu sắc và hình khối phải phục tùng ý chí sáng tạo.</p>
+            </div>
+            <div class="skills-box" data-aos="fade-left">
+                <h3>Pháp bảo Kỹ năng</h3>
+                <div class="skills-grid">
+                    <span class="skill-tag">Figma & UI/UX</span>
+                    <span class="skill-tag">Photoshop</span>
+                    <span class="skill-tag">Illustrator</span>
+                    <span class="skill-tag">Branding Strategy</span>
+                    <span class="skill-tag">C++ Basic</span>
+                    <span class="skill-tag">AI Tools (Gemini)</span>
+                </div>
+            </div>
         </div>
     </section>
 
     <section id="projects" class="container">
-        <h2 class="section-title">Công trình vĩ đại</h2>
+        <h2 class="section-title" data-aos="fade-up" style="text-align:center;">Công trình vĩ đại</h2>
         <div class="project-grid">
-            <div class="project-card">
-                <h3>Amory Cake Website</h3>
-                <p>Một kiệt tác giao diện dành cho tiệm bánh, nơi sự ngọt ngào gặp gỡ thiết kế đẳng cấp.</p>
-                <span class="tag">UI/UX Design</span>
+            <div class="project-card" data-aos="flip-left" data-aos-delay="100">
+                <div class="card-icon"><i class="fa-solid fa-cake-candles"></i></div>
+                <h3>Amory Cake</h3>
+                <p>Dự án thiết kế Website cho tiệm bánh, kết hợp giữa sự ngọt ngào và bố cục Photoshop đẳng cấp.</p>
             </div>
-            <div class="project-card">
-                <h3>Thánh địa Study App</h3>
-                <p>Hệ thống quản lý tri thức dành cho các đồng môn sinh viên.</p>
-                <span class="tag">Figma Prototype</span>
+            <div class="project-card" data-aos="flip-left" data-aos-delay="300">
+                <div class="card-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                <h3>Student Study App</h3>
+                <p>Hệ thống quản lý học tập tối ưu được thiết kế Prototyping chuyên nghiệp trên Figma.</p>
+            </div>
+            <div class="project-card" data-aos="flip-left" data-aos-delay="500">
+                <div class="card-icon"><i class="fa-solid fa-shirt"></i></div>
+                <h3>Fashion Wholesale</h3>
+                <p>Kế hoạch kinh doanh và chiến dịch Marketing sáng tạo cho thương hiệu thời trang.</p>
             </div>
         </div>
     </section>
 
-    <footer class="contact">
-        <h2>Diện kiến Đại Đế tại:</h2>
-        <p>Email: huy.tra24150022@st.hcmuaf.edu.vn</p>
+    <footer id="contact" data-aos="fade-up">
         <p>Lớp: 020100119504</p>
-        <div class="footer-bottom">© 2026 AMORY ĐẠI ĐẾ. All Rights Reserved.</div>
+        <p>Thánh địa: tra.huy24150022@st.hcmuaf.edu.vn</p>
+        <div class="social-icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-behance"></i>
+            <i class="fa-brands fa-github"></i>
+        </div>
+        <div style="margin-top:20px; font-size: 0.8rem; opacity: 0.6;">© 2026 AMORY EMPIRE. All Rights Reserved.</div>
     </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ 
+          duration: 1000, 
+          once: false,
+          mirror: true 
+      });
+    </script>
 </body>
 </html>
