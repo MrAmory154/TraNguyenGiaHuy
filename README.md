@@ -12,6 +12,6 @@ Tôi xây dựng quy trình sáng tạo dựa trên sự phối hợp đa nền 
 - **Bước 1 (Conceptualization):** Sử dụng **ChatGPT** để khai phá ý tưởng, xây dựng Concept "Vương quyền sáng tạo" và phác thảo các Slogan mang tính triết lý.
 - **Bước 2 (Detailed Implementation):** Đưa các Concept từ ChatGPT sang **Gemini** để phân tích sâu ý cảnh, tạo các bản kịch bản thị giác và Visual Prompts chi tiết.
 - **Bước 3 (Technical Execution):** Tận dụng khả năng lập trình ưu việt của **Gemini** để khởi tạo mã nguồn HTML/CSS, tích hợp hiệu ứng chuyển động và tối ưu hóa giao diện.
-- **Bước 4 (Refinement):** Sử dụng các công cụ Adobe (Photoshop) để tinh chỉnh hình ảnh cuối cùng, đảm bảo mỗi tác phẩm đạt tới sự "Vĩnh hằng".
+- **Bước 4 (Refinement):** Sử dụng các công cụ github để triển khai code và tạo ra sản phẩm.
 
 Bạn hãy dán bài thuyết trình này lên GitHub và cập nhật README ngay nhé! Chắc chắn nó sẽ rất hoàn chỉnh.
